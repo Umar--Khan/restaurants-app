@@ -6,7 +6,9 @@ const RestaurantsList = (): ReactElement => {
   const restaurantsList = useAppSelector(({ restaurants }) => restaurants.list);
 
   const renderRestaurants = () =>
-    restaurantsList.map(restaurant => <li>{restaurant.name}</li>);
+    restaurantsList.map(restaurant => (
+      <li key={restaurant.id}>{restaurant.name}</li>
+    ));
 
   return <ul>{renderRestaurants()}</ul>;
 };
