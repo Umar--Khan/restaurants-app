@@ -4,7 +4,7 @@ import { useAppDispatch, useDebounce } from 'hooks';
 import {
   getRestaurants,
   resetRestaurants,
-} from 'features/restaurants/restaurantsSlice';
+} from 'features/restaurantsSearch/restaurantsSearchSlice';
 
 const Restaurants = (): ReactElement => {
   const dispatch = useAppDispatch();
@@ -29,7 +29,7 @@ const Restaurants = (): ReactElement => {
   };
 
   return (
-    <form role='search'>
+    <form role='search' onSubmit={e => e.preventDefault()}>
       <input
         type='search'
         id='restaurant-search'
