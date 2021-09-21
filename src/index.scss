@@ -1,0 +1,40 @@
+@import "styles/variables";
+@import "shared/Button/Button.scss";
+
+* {
+  box-sizing: border-box;
+  font-family: 'HelveticaNeueCyr', sans-serif;
+}
+
+a,
+p,
+li,
+ul,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+body {
+  margin: 0;
+}
+
+body,
+html {
+  margin: 0 !important;
+  background-repeat: no-repeat;
+}
+
+html {
+  font-size: $font-060;
+  overflow-x: hidden;
+  text-rendering: optimizeLegibility;
+  overflow-y: scroll;
+  word-break: normal;
+  display: block;
+}
+
+a {
+  text-decoration: none;
+}
