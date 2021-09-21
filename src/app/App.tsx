@@ -1,13 +1,13 @@
 import { ReactElement } from 'react';
 
-import Restaurants from 'features/restaurantsSearch/RestaurantsSearch';
-import RestaurantsList from 'features/restaurantsList/RestaurantsList';
+import { UserProvider } from 'context/userContext';
+
+import Restaurants from 'components/Restaurants/Restaurants';
 
 const App = (): ReactElement => (
-  <>
+  <UserProvider>
     <Restaurants />
-    <RestaurantsList />
-  </>
+  </UserProvider>
 );
 
 export default App;
