@@ -1,3 +1,5 @@
+import { sanitizeString } from 'utils/sanitizeString';
+
 export type Restaurant = {
   name: string;
   id: number;
@@ -25,3 +27,16 @@ export const restaurants: Restaurant[] = [
     id: 5,
   },
 ];
+
+export const getRestaurants = (searchTerm: string) =>
+  restaurants.filter(restaurant => {
+    const sanitizedRestaurantName = sanitizeString(restaurant.name);
+    const sanitizedPayload = sanitizeString(searchTerm);
+
+    return (
+      sanitizedRestaurantName
+        .split(' ')
+        .some(val => sanitizedPayload.split(' ').includes(val)) ||
+      sanitizedRestaurantName.includes(sanitizedPayload)
+    );
+  });
