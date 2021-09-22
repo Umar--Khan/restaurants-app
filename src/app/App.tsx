@@ -3,21 +3,17 @@ import { ReactElement } from 'react';
 import { UserProvider } from 'context/userContext';
 
 import Restaurants from 'components/Restaurants/Restaurants';
-import Button from 'shared/Button/Button';
+import AppLayout from 'appLayout/AppLayout';
+import Container from 'shared/Container/Container';
 
 const App = (): ReactElement => (
   <UserProvider>
-    <>
-      <Restaurants />
-      <Button
-        id='button'
-        onClick={() => {
-          console.log();
-        }}
-      >
-        Search
-      </Button>
-    </>
+    <AppLayout>
+      {/* Usually would add routes here and split by views design pattern */}
+      <Container>
+        <Restaurants />
+      </Container>
+    </AppLayout>
   </UserProvider>
 );
 
