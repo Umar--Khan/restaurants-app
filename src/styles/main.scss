@@ -1,0 +1,55 @@
+/*
+Not a fan of this single sass file import but to get around it
+I need to eject from react-scripts. Or compile build sass files seperately
+*/
+
+@import "styles/variables";
+@import "appLayout/Header/Header";
+@import "appLayout/Main/Main";
+@import "shared/Button/Button";
+@import "shared/NavLink/NavLink";
+@import "shared/Container/Container";
+@import "shared/TextLink/TextLink";
+@import "shared/Card/Card";
+@import "components/Restaurants/Restaurants";
+
+* {
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
+}
+
+a,
+p,
+li,
+ul,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+body {
+  margin: 0;
+}
+
+body,
+html {
+  margin: 0 !important;
+  background-repeat: no-repeat;
+  background-color: $color-off-white;
+}
+
+html {
+  font-size: 16px;
+  font-weight: 400;
+  color: $color-dark-grey;
+  overflow-x: hidden;
+  text-rendering: optimizeLegibility;
+  overflow-y: scroll;
+  word-break: normal;
+  display: block;
+}
+
+a {
+  text-decoration: none;
+}

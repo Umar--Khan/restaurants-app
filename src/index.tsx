@@ -1,10 +1,14 @@
+// Polyfills for react ie9 which should support ie10 & ie11
+import 'react-app-polyfill/ie9';
+import 'react-app-polyfill/stable';
+
 import { StrictMode } from 'react';
 import ReactDOM from 'react-dom';
 
 import App from 'app/App';
 import reportWebVitals from 'reportWebVitals';
 
-import 'index.scss';
+import 'styles/main.scss';
 
 ReactDOM.render(
   <StrictMode>

@@ -1,0 +1,17 @@
+.header {
+  background-color: $color-white;
+
+  &__container {
+    min-height: 76px;
+    display: flex;
+    max-width: 94%;
+    margin: 0 auto;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__links {
+    display: flex;
+    list-style: none;
+  }
+}
