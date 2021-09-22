@@ -1,7 +1,3 @@
-# Getting Started with Create React App
-
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
 ## Available Scripts
 
 In the project directory, you can run:
@@ -19,28 +15,97 @@ You will also see any lint errors in the console.
 Launches the test runner in the interactive watch mode.\
 See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `yarn build`
+---
+### Technical Test Just Eat
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+https://github.com/justeat/JustEat.Recruitment.UI
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+##Questions
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+####What approaches did you use when completing the test? Do you use any CSS methodologies or techniques to help this approach?
 
-### `yarn eject`
+I used BEM styling approach to organise and efficiently select elements. It helped me to structure my code.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+Functional react component composition. Common abstraction.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+####If you had more time to spend on the test, what would you like to add to your solution?
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+- Testing
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+- Fallback UI (Error, loading, skeleton)
 
-## Learn More
+- I would go with mobile first design in the beginning
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- Responsive Styling
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- Consider using styled components/sass built through webpack to have scoped styling
+
+- Precisely follow the design
+
+- API client to handle requests - Serialize data within client – Perform retries from the FE if it’s not done from the BE
+
+- Data logging
+
+- Client-side caching if not available from backend services
+
+####What browsers should your test work in? What will happen if we test it in older browsers like IE10?
+
+Should work on Firefox, Safari and Edge. It might also work for IE10. I have polyfills in place. Might need to re-check the styling. Some attributes might require –ms- prefix.
+
+####What's your favourite programming language? Why?
+
+Huge fan of TypeScript right now. IDE provides you with what kind of data structure you’re looking. Makes it much easier to spot bugs. Also JS is so much powerful and predictable with it.
+
+####Please describe yourself using JSON.
+
+````{
+  "customer": {
+    "lastName": "Khan",
+    "phoneNumber": "+447111111111",
+    "firstName": "Umar",
+    "profile": "Traveller, foodie, avid reader and onion connoisseur."
+  },
+  "issues": [
+    {
+      "code": "FE_DEVELOPER_READY_FOR_TESTING"
+    },
+    {
+      "minimumOrderValue": 1,
+      "currency": "GBP",
+      "code": "MINIMUM_ORDER_VALUE_NOT_MET",
+      "additionalSpendRequired": 100
+    }
+  ],
+  "serviceType": "frontend developer",
+  "isFulfillable": true,
+  "fulfilment": {
+    "time": {
+      "scheduled": {
+        "from": "2021-09-28T00:30:00.000",
+        "to": "2021-09-29T00:30:00.000"
+      },
+      "asap": true
+    },
+    "location": {
+      "geolocation": {
+        "longitude": 52.444597189517125,
+        "latitude": -1.8340921489779307
+      },
+      "address": {
+        "locality": "Birmingham",
+        "lines": [
+          "XX XXXXXXX Road"
+        ],
+        "postalCode": "XXX XXX",
+        "administrativeArea": "England"
+      }
+    },
+    "table": {
+      "identifier": "Table 1"
+    }
+  },
+  "restaurant": {
+    "id": "NANDOS",
+    "availabilityId": "ALWAYS"
+  }
+}
