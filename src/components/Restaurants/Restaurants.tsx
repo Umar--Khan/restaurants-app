@@ -44,10 +44,17 @@ const Restaurants = (): ReactElement => {
         <SearchInput
           searchTerm={searchTerm}
           handleInputChange={handleOnChange}
+          // Can switch the search filter to stop auto searching the restaurants here. Using the formsubmit to do that
           handleFormSubmit={e => e.preventDefault()}
-          submitButton={<Button id='search-restaurants-submit'>Search</Button>}
+          submitButton={
+            <Button id='search-restaurants-submit' type='submit'>
+              Search
+            </Button>
+          }
           placeholder='Search for a restaurant'
           data-testid='search-restaurants-input'
+          id='search-restaurants-input'
+          aria-label='Search for a restaurant'
         />
       </div>
       {/* Would split the sorting into a seperate component */}
