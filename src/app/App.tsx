@@ -2,17 +2,21 @@ import { ReactElement } from 'react';
 
 import { UserProvider } from 'context/userContext';
 
-import Restaurants from 'components/Restaurants/Restaurants';
 import AppLayout from 'appLayout/AppLayout';
-import Container from 'shared/Container/Container';
+import Restaurants from 'components/Restaurants/Restaurants';
+import AddressCard from 'components/AddressCard/AddressCard';
+import GridContainer from 'shared/Containers/GridContainer';
 
 const App = (): ReactElement => (
   <UserProvider>
     <AppLayout>
       {/* Usually would add routes here and split by views design pattern */}
-      <Container>
+      <GridContainer>
+        <div>
+          <AddressCard />
+        </div>
         <Restaurants />
-      </Container>
+      </GridContainer>
     </AppLayout>
   </UserProvider>
 );

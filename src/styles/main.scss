@@ -8,10 +8,14 @@ I need to eject from react-scripts. Or compile build sass files seperately
 @import "appLayout/Main/Main";
 @import "shared/Button/Button";
 @import "shared/NavLink/NavLink";
-@import "shared/Container/Container";
+@import "shared/SearchInput/SearchInput";
+@import "shared/Containers/GridContainer";
+@import "shared/Containers/FlexContainer";
 @import "shared/TextLink/TextLink";
 @import "shared/Card/Card";
+@import "components/AddressCard/AddressCard";
 @import "components/Restaurants/Restaurants";
+@import "components/Restaurants/RestaurantCard/RestaurantCard";
 
 * {
   box-sizing: border-box;
@@ -52,4 +56,12 @@ html {
 
 a {
   text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+ul {
+  padding: 0;
 }

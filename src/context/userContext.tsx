@@ -1,4 +1,4 @@
-import React, { createContext, PropsWithChildren, ReactNode } from 'react';
+import { createContext, PropsWithChildren, ReactNode } from 'react';
 
 import { User, user } from 'service/__mocks__/user';
 
