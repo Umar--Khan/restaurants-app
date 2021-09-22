@@ -1,9 +1,8 @@
 .btn {
-  padding: $space-060;
+  padding: 16px 12px;
   text-align: center;
-  font-size: $font-060;
+  font-size: 18px;
   font-weight: 400;
-  line-height: 1;
   color: $color-white;
   text-decoration: none;
   cursor: pointer;
@@ -11,7 +10,7 @@
   border-radius: 4px;
 
   &:hover {
-    background-color: $color-dark-blue;
+    background-color: $color-orange;
   }
 
   &--primary {

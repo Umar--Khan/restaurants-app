@@ -1,0 +1,10 @@
+.address-card {
+  display: flex;
+  padding: 16px;
+
+  &__icon {
+    width: 18px;
+    height: 18px;
+    margin-right: 10px;
+  }
+}

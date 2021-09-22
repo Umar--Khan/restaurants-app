@@ -1,3 +1,13 @@
 .restaurants {
-  margin-left: 12px;
+  &__search-input {
+    margin-bottom: 24px;
+  }
+
+  &__meta_banner {
+    margin-bottom: 24px;
+
+    &__sort > svg {
+      margin-left: 12px;
+    }
+  }
 }

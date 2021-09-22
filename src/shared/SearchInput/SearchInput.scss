@@ -1,0 +1,53 @@
+.search-input {
+  border-radius: 4px;
+
+  &__form {
+    position: relative;
+
+    &__icon > svg {
+      width: 20px;
+      height: 20px;
+      position: absolute;
+      top: 50%;
+      left: 16px;
+      transform: translateY(-50%);
+    }
+
+    &__input {
+      padding: 22px 54px;
+      outline: 0;
+      width: 100%;
+      border-radius: 8px;
+      border: 1px solid $color-light-grey;
+      font-size: 16px;
+
+      &::placeholder {
+        /* Chrome, Firefox, Opera, Safari 10.1+ */
+        color: $color-grey;
+        font-size: 16px;
+        font-weight: 300;
+      }
+
+      :-ms-input-placeholder {
+        /* Internet Explorer 10-11 */
+        color: $color-grey;
+        font-size: 16px;
+        font-weight: 300;
+      }
+    }
+
+    >button {
+      height: calc(100% - 24px);
+      width: 90px;
+      font-size: 16px;
+      margin: 12px;
+      position: absolute;
+      top: 0;
+      right: 0;
+      display: inline-block;
+      vertical-align: middle;
+      padding: 0;
+      user-select: none;
+    }
+  }
+}

@@ -1,9 +1,9 @@
-import { PropsWithChildren, MouseEventHandler } from 'react';
+import { PropsWithChildren, MouseEventHandler, HTMLAttributes } from 'react';
 import classNames from 'classnames';
 
-interface ButtonProps {
+interface ButtonProps extends HTMLAttributes<HTMLButtonElement> {
   id: string;
-  onClick: MouseEventHandler<HTMLButtonElement>;
+  onClick?: MouseEventHandler<HTMLButtonElement>;
   color?: 'primary';
   variant?: 'text' | 'filled';
   type?: 'submit' | 'button' | 'reset';
