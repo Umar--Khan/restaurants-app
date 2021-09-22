@@ -1,0 +1,19 @@
+.all-cuisines {
+  &__meta {
+    margin: 24px 0;
+
+    &__text > svg {
+      margin-right: 12px;
+    }
+  }
+
+  &__list {
+    &__cuisine {
+      margin-bottom: 8px;
+
+      &__card {
+        padding: 10px 12px;
+      }
+    }
+  }
+}
