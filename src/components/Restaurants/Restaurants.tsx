@@ -39,7 +39,7 @@ const Restaurants = (): ReactElement => {
   };
 
   return (
-    <div className='restaurants'>
+    <div className='restaurants' data-testid='restaurants-wrapper'>
       <div className='restaurants__search-input'>
         <SearchInput
           searchTerm={searchTerm}
@@ -47,6 +47,7 @@ const Restaurants = (): ReactElement => {
           handleFormSubmit={e => e.preventDefault()}
           submitButton={<Button id='search-restaurants-submit'>Search</Button>}
           placeholder='Search for a restaurant'
+          data-testid='search-restaurants-input'
         />
       </div>
       {/* Would split the sorting into a seperate component */}
@@ -60,7 +61,7 @@ const Restaurants = (): ReactElement => {
       {isDebouncing ? (
         <div>Getting restaurants...</div>
       ) : (
-        <ul className='restaurants__list'>
+        <ul className='restaurants__list' data-testid='restaurants__list'>
           {restaurants.map(restaurant => (
             <RestaurantCard restaurant={restaurant} key={restaurant.id} />
           ))}

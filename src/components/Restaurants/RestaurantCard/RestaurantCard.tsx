@@ -1,5 +1,4 @@
 import { Restaurant } from 'service/__mocks__/restaurants';
-import Card from 'shared/Card/Card';
 
 import OfferIcon from 'assets/icons/offers.svg';
 
@@ -8,9 +7,11 @@ interface RestaurantCardProps {
 }
 
 // Would spend more time to adding the rest of the details from the card
+// The <li> reuses the css from the card but doesn't use the component.
+// I would make the Card component take in a prop for the elementType and use that instead
 
 const RestaurantCard = ({ restaurant }: RestaurantCardProps) => (
-  <Card className='restaurant-card'>
+  <li className='card restaurant-card' data-testid='restaurant-card'>
     <a className='restaurant-card__link' href={restaurant.slug}>
       <div className='restaurant-card__thumbnail'>
         <img src={restaurant.thumbnail} alt={restaurant.name} />
@@ -33,7 +34,7 @@ const RestaurantCard = ({ restaurant }: RestaurantCardProps) => (
         )}
       </div>
     </a>
-  </Card>
+  </li>
 );
 
 export default RestaurantCard;
