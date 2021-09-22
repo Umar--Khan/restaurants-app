@@ -5,6 +5,7 @@ import { UserProvider } from 'context/userContext';
 import AppLayout from 'appLayout/AppLayout';
 import Restaurants from 'components/Restaurants/Restaurants';
 import AddressCard from 'components/AddressCard/AddressCard';
+import AllCuisines from 'components/AllCuisines/AllCuisines';
 import GridContainer from 'shared/Containers/GridContainer';
 
 const App = (): ReactElement => (
@@ -14,6 +15,7 @@ const App = (): ReactElement => (
       <GridContainer>
         <div>
           <AddressCard />
+          <AllCuisines />
         </div>
         <Restaurants />
       </GridContainer>
